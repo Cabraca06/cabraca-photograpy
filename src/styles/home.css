@@ -1,0 +1,100 @@
+
+
+.fondo-home {
+    background-image: url('../assets/img/IMG_0591.jpg'); /* Asegúrate de que la ruta sea correcta */
+    background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+    background-position: center; /* Centra la imagen */
+    width: 100%;
+    min-height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.info-fondo{
+    background-color: rgba(255, 255, 255, 0.265); /* Fondo blanco con opacidad */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 600px; /* Ancho máximo para el contenido */
+}
+
+.container-home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f5f5f5; /* Color de fondo suave */
+    min-height: 100vh; /* Asegura que el contenedor ocupe toda la altura de la pantalla */
+}
+
+.carousel-container {
+    position: relative; /* Es importante para posicionar las flechas y puntos */
+    width: 100%; /* O un ancho fijo que desees */
+    max-width: 800px; /* Ancho máximo */
+    margin: 20px auto; /* Centrar el carrusel */
+    overflow: hidden; /* Asegura que las imágenes no se salgan del contenedor */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .carousel-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Transición para el deslizamiento */
+    /* No necesitamos transform en este caso porque solo mostramos una imagen */
+  }
+  
+  .carousel-image {
+    width: 100%;
+    height: 80vh; /* Altura fija para las imágenes del carrusel */
+    object-fit: cover; /* Recorta la imagen para que cubra el área sin distorsión */
+    display: block;
+  }
+  
+  .carousel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(0%); /* Centra verticalmente */    
+  }
+  
+  .carousel-button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%; /* Botones circulares */
+    transition: background-color 0.3s ease;
+    user-select: none; /* Evita que el texto se seleccione al hacer clic */
+  }
+  
+  .carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .carousel-dots {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 8px; /* Espacio entre los puntos */
+  }
+  
+  .dot {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+  }
+  
+  .dot.active {
+    background-color: white;
+    border-color: rgba(0, 0, 0, 0.5);
+  }
