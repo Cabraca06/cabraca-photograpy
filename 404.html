@@ -1,14 +1,26 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cabraca Photography</title>
     <script>
-      var path = window.location.pathname;
-      var query = window.location.search;
-      window.location.replace(
-        '/cabraca-photography/' +
-        '?p=' + encodeURIComponent(path.slice(1)) + (query ? '&q=' + encodeURIComponent(query.slice(1)) : '')
-      );
+      (function(l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search.slice(1).split('&').map(function(s) {
+            return s.replace(/~and~/g, '&');
+          });
+          window.history.replaceState(null, null,
+            l.pathname.slice(0, -1) + decoded[0] +
+            (decoded[1] ? '?' + decoded[1] : '') + l.hash
+          );
+        }
+      }(window.location));
     </script>
+    <script type="module" crossorigin src="/cabraca-photograpy/assets/index-CHq5yARU.js"></script>
+    <link rel="stylesheet" crossorigin href="/cabraca-photograpy/assets/index-CW51aWcc.css">
   </head>
+  <body>
+    <div id="root"></div>
+  </body>
 </html>
