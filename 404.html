@@ -1,14 +1,14 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="#" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cabraca Photography</title>
-    <script type="module" crossorigin src="/cabraca-photograpy/assets/index-DAsBvNiF.js"></script>
-    <link rel="stylesheet" crossorigin href="/cabraca-photograpy/assets/index-CW51aWcc.css">
+    <meta charset="utf-8">
+    <script>
+      var path = window.location.pathname;
+      var query = window.location.search;
+      window.location.replace(
+        '/cabraca-photography/' +
+        '?p=' + encodeURIComponent(path.slice(1)) + (query ? '&q=' + encodeURIComponent(query.slice(1)) : '')
+      );
+    </script>
   </head>
-  <body>
-    <div id="root"></div>
-  </body>
 </html>
