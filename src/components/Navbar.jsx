@@ -16,10 +16,10 @@ function Navbar() {
     <nav className="navbar">
     
       <div className={`nav-links ${isOpen ? 'active' : ''}`}>
-        <a href="/">Home</a>
-        <a href="/about">About me</a>
-        <a href="/projects">Projects</a>
-        <a href="/contact">Contact</a>
+        <link to="/">Home</link>
+        <link to="/about">About me</link>
+        <link to="/projects">Projects</link>
+        <link to="/contact">Contact</link>
       </div>
       <div className="hamburger" onClick={toggleMenu}>
         {isOpen ? <FaTimes /> : <FaBars />}
