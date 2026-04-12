@@ -4,6 +4,7 @@ import { useState } from 'react'
 import img1 from '../assets/img/_MG_0318.jpg';
 import img2 from '../assets/img/_MG_0331.jpg';
 import img3 from '../assets/img/_MG_0201.jpg';
+import { Link } from 'react-router-dom'
 
 
 function Home() {
@@ -37,7 +38,7 @@ function Home() {
             <div className='info-fondo'>
             <h1>#########</h1>
             <p>La fotografia es una mejor manera de ver el mundo, explora lo que te puedo ofrecer </p>
-            <button onClick={() => window.location.href = '/projects'}>Explore</button>
+           <button> <Link to="/projects">Projects</Link> </button> 
             </div>    
         </div>
 
