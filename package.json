@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://richardcabraca.github.io/cabraca-photography/",
+  "homepage": "https://cabraca06.github.io/cabraca-photography/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
