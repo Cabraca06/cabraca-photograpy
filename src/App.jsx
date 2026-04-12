@@ -14,7 +14,8 @@ function App() {
   return (
       <> 
     <Navbar /> 
-    <BrowserRouter basename="/cabraca-photography"> 
+    <BrowserRouter basename="/cabraca-photograpy"> 
+    <Navbar />
       <Routes>
         <Route path="/" element={<Navigate to="/home" />} />
         <Route path="/home" element={<Home />} />
