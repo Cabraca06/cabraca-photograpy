@@ -13,8 +13,7 @@ function App() {
 
   return (
       <> 
-    <Navbar /> 
-    <BrowserRouter basename="/cabraca-photograpy"> 
+    <BrowserRouter basename="/cabraca-photograpy">
     <Navbar />
       <Routes>
         <Route path="/" element={<Navigate to="/home" />} />
