@@ -2,9 +2,9 @@ import React from 'react'
 
 function Footer() {
   return (
-    <div>
-      
-    </div>
+    <footer>
+      <p>© 2024 Cabraca Photography. All rights reserved.</p>
+    </footer>
   )
 }
 
