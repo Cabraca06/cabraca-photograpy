@@ -1,0 +1,40 @@
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+  }
+  
+  /* Contenedor principal de la aplicación para el sticky footer */
+  /* #root es el div donde React monta la aplicación */
+  #root, .app-container {
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en columna (Navbar, Contenido, Footer) */
+    min-height: 100vh; /* Asegura que ocupe al menos el 100% de la altura de la ventana */
+  }
+  
+  /* Área de contenido principal */
+  .main-content {
+    flex-grow: 1; /* Esto hace que el contenido principal ocupe todo el espacio disponible
+                     empujando el footer hacia abajo */
+    /* Puedes añadir un padding-bottom si el footer es fijo y necesitas evitar solapamiento */
+    /* padding-bottom: 50px; */
+  }
+  
+  /* Estilos para el footer */
+  footer {
+    background-color: #333; /* Color de fondo de ejemplo */
+    color: #fff; /* Color de texto de ejemplo */
+    padding: 20px; /* Espaciado interno */
+    text-align: center; /* Centra el texto */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    /* No se usa position: fixed; para un "sticky footer" que se queda al final del contenido */
+  }
+  
+  /* Ejemplo de ajuste responsivo para el footer */
+  @media (max-width: 768px) {
+    footer p {
+      font-size: 0.9em; /* Reduce el tamaño de la fuente en pantallas pequeñas */
+    }
+  }
