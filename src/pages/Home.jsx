@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 import '../styles/home.css'
+
 import photoAssets from '../components/img';
 import { Link } from 'react-router-dom'
 
 function Home() {
   const images = [photoAssets.img6, photoAssets.img8, photoAssets.img3];
+
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [showOriginalImage, setShowOriginalImage] = useState(false);
 
