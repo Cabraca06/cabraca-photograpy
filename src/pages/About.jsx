@@ -1,13 +1,13 @@
 import React from 'react'
 import '../styles/About.css'
-import imgAbout from '../assets/img/_MG_0333.jpg';
+import photoAssets from '../components/img';
 
 function About() {
   return (
     <div className="about-container">
 
       <div className="about-image-wrapper">
-        <img src={imgAbout} alt="Cabraca Photography" className="about-image" />
+        <img src={photoAssets.img9} alt="Cabraca Photography" className="about-image" />
       </div>
 
       <div className="about-text">
