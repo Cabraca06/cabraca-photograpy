@@ -14,7 +14,7 @@ function Navbar() {
     <nav className="navbar">
 
       <div className="navbar-logo">
-        <Link to="/home" onClick={closeMenu}>Cabraca</Link>
+        <Link to="/home" onClick={closeMenu}>Photography Portfolio</Link>
       </div>
 
      

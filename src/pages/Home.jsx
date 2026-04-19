@@ -26,7 +26,7 @@ function Home() {
       {/* Hero Section */}
       <div className="fondo-home">
         <div className="info-fondo">
-          <h1>Cabraca Photography</h1>
+          <h1>Photography Portfolio Richard</h1>
           <p>La fotografía es una mejor manera de ver el mundo, explora lo que te puedo ofrecer</p>
           <button className="btn-projects">
             <Link to="/projects">Ver Proyectos</Link>
