@@ -2,45 +2,36 @@ import React, { useState } from 'react'
 import '../styles/Projects.css'
 import { photoArray } from '../components/img';
 
-// =====================================================
-// CATEGORÍAS — agrega o elimina categorías aquí
-// Para añadir una nueva, agrégala al array y asígnala
-// en PHOTOS con el mismo valor en "cat"
-// =====================================================
 const CATEGORIES = ['all', 'portrait', 'landscape', 'street'];
 
-// =====================================================
-// FOTOS — edita títulos, categorías y descripciones
-// Las imágenes vienen automáticamente desde img.jsx
-// Para agregar más: importa en img.jsx y listo
-// =====================================================
+
 const PHOTOS = photoArray.map((src, i) => {
   const catalog = [
-    { title: 'Golden Hour',        cat: 'portrait',  description: 'Natural light portrait during sunset.'       },
-    { title: 'Urban Steps',        cat: 'street',    description: 'Street life captured in motion.'             },
-    { title: 'City Pulse',         cat: 'street',    description: 'Urban energy in motion.'                     },
-    { title: 'Forest Path',        cat: 'landscape', description: 'A quiet walk through dense forest.'          },
-    { title: 'Morning Light',      cat: 'portrait',  description: 'Soft morning light on a natural backdrop.'   },
-    { title: 'Golden Hour II',     cat: 'portrait',  description: 'Second take on the golden hour session.'     },
-    { title: 'Studio Light',       cat: 'portrait',  description: 'Controlled studio lighting session.'         },
-    { title: 'Mountain Silence',   cat: 'landscape', description: 'Peaceful mountain scenery at dawn.'          },
-    { title: 'Studio Depth',       cat: 'portrait',  description: 'Playing with depth and shadows.'             },
-    { title: 'Rain Reflections',   cat: 'street',    description: 'Wet streets after a night rain.'             },
-    { title: 'Coastal Cliffs',     cat: 'landscape', description: 'Dramatic coastline at high tide.'            },
-    { title: 'Desert Dunes',       cat: 'landscape', description: 'Minimalist dunes under clear sky.'           },
-    { title: 'Night Market',       cat: 'street',    description: 'Warm lights of a local night market.'        },
-    { title: 'Open Field',         cat: 'landscape', description: 'Wide open field at dusk.'                    },
-    { title: 'Metro Rush',         cat: 'street',    description: 'Peak hour at the metro station.'             },
-    { title: 'Backlight',          cat: 'portrait',  description: 'Strong backlight creating a silhouette.'     },
-    { title: 'Natural Window',     cat: 'portrait',  description: 'Window light defining the subject.'          },
-    { title: 'Street Corner',      cat: 'street',    description: 'A quiet corner in the old town.'             },
-    { title: 'Soft Morning',       cat: 'portrait',  description: 'Gentle morning light, minimal setup.'        },
-    { title: 'Lake Mirror',        cat: 'landscape', description: 'Perfect reflection on a still lake.'         },
-    { title: 'City at Night',      cat: 'street',    description: 'Long exposure of the city at night.'         },
-    { title: 'Autumn Tones',       cat: 'landscape', description: 'Warm autumn colors in a city park.'          },
-    { title: 'Rooftop View',       cat: 'street',    description: 'City skyline from a rooftop.'                },
-    { title: 'Close Up',           cat: 'portrait',  description: 'Tight framing highlighting expression.'      },
-    { title: 'Horizon Line',       cat: 'landscape', description: 'Clean horizon at the edge of the sea.'       },
+    { title: 'Golden Hour',        cat: 'portrait',  description: '##'},
+    { title: 'Urban Steps',        cat: 'street',    description: '##'},
+    { title: 'City Pulse',         cat: 'street',    description: '##'},
+    { title: 'Forest Path',        cat: 'landscape', description: '##'},
+    { title: 'Morning Light',      cat: 'portrait',  description: '##'},
+    { title: 'Golden Hour II',     cat: 'portrait',  description: '##'},
+    { title: 'Studio Light',       cat: 'portrait',  description: '##'},
+    { title: 'Mountain Silence',   cat: 'landscape', description: '##'},
+    { title: 'Studio Depth',       cat: 'portrait',  description: '##'},
+    { title: 'Rain Reflections',   cat: 'street',    description: '##'},
+    { title: 'Coastal Cliffs',     cat: 'landscape', description: '##'},
+    { title: 'Desert Dunes',       cat: 'landscape', description: '##'},
+    { title: 'Night Market',       cat: 'street',    description: '##'},
+    { title: 'Open Field',         cat: 'landscape', description: '##'},
+    { title: 'Metro Rush',         cat: 'street',    description: '##'},
+    { title: 'Backlight',          cat: 'portrait',  description: '##'},
+    { title: 'Natural Window',     cat: 'portrait',  description: '##'},
+    { title: 'Street Corner',      cat: 'street',    description: '##'},
+    { title: 'Soft Morning',       cat: 'portrait',  description: '##'},
+    { title: 'Lake Mirror',        cat: 'landscape', description: '##'},
+    { title: 'City at Night',      cat: 'street',    description: '##'},
+    { title: 'Autumn Tones',       cat: 'landscape', description: '##'},
+    { title: 'Rooftop View',       cat: 'street',    description: '##'},
+    { title: 'Close Up',           cat: 'portrait',  description: '##'},
+    { title: 'Horizon Line',       cat: 'landscape', description: '##'},
   ];
   const meta = catalog[i] || { title: `Photo ${i + 1}`, cat: 'street', description: '' };
   return { id: i + 1, src, ...meta };

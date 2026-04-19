@@ -120,9 +120,9 @@ function Contact() {
 
           <p className="info-label" style={{ marginBottom: '10px' }}>Social media</p>
           <div className="social-row">
-            <a href="https://instagram.com" target="_blank" rel="noreferrer" className="social-btn">Instagram</a>
-            <a href="https://linkedin.com"  target="_blank" rel="noreferrer" className="social-btn">LinkedIn</a>
-            <a href="https://wa.me/"        target="_blank" rel="noreferrer" className="social-btn">WhatsApp</a>
+            <a href="https://www.instagram.com/mirrorless__photography/" target="_blank" rel="noreferrer" className="social-btn">Instagram</a>
+           {/*  <a href="https://linkedin.com"  target="_blank" rel="noreferrer" className="social-btn">LinkedIn</a>*/}
+            <a href="https://wa.me/+50671014718"        target="_blank" rel="noreferrer" className="social-btn">WhatsApp</a>
           </div>
 
           <hr className="divider" />
