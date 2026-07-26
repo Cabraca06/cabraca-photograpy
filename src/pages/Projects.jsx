@@ -1,40 +1,60 @@
 import React, { useState } from 'react'
 import '../styles/Projects.css'
-import { photoArray } from '../components/img';
+import photoAssets from '../components/img';
+import WhatsAppBubble from '../components/WhatsAppBubble';
 
-const CATEGORIES = ['all', 'portrait', 'landscape', 'street'];
+const CATEGORIES = ['all', 'Animals', 'Street', 'Nature', 'Publicity', 'Sunset'];
 
+const PHOTO_META = {
+  // --- Animales / retratos de gatos ---
+  img1:  { title: 'Golden Hour',      cat: 'Animals', description: 'Un gato tomando el sol en la tarde, bostezando y estirando sus patas, capturando la esencia de la tranquilidad y la belleza de la vida cotidiana.' },
+  img2:  { title: 'Urban Steps',      cat: 'Animals', description: 'Boby se ubica en una zona donde la luz ilumina el rostro y posa para la cámara, mostrando su personalidad y la conexión con su entorno.' },
+  img5:  { title: 'Morning Light',    cat: 'Animals', description: 'Mostrando su enojo y su mirada penetrante, capturando la esencia de su personalidad y la conexión con su entorno.' },
+  img7:  { title: 'Rain Reflections', cat: 'Animals', description: 'Un gato en un día lluvioso, sin perder de vista lo que lo rodea.' },
+  img8:  { title: 'Coastal Cliffs',   cat: 'Animals', description: '##' },
+  img9:  { title: 'Desert Dunes',     cat: 'Animals', description: '##' },
+  img10: { title: 'Night Market',     cat: 'Animals', description: '##' },
+  img33: { title: 'Quiet Gaze',       cat: 'Nature', description: '##' },
 
-const PHOTOS = photoArray.map((src, i) => {
-  const catalog = [
-    { title: 'Golden Hour',        cat: 'portrait',  description: '##'},
-    { title: 'Urban Steps',        cat: 'street',    description: '##'},
-    { title: 'City Pulse',         cat: 'street',    description: '##'},
-    { title: 'Forest Path',        cat: 'landscape', description: '##'},
-    { title: 'Morning Light',      cat: 'portrait',  description: '##'},
-    { title: 'Golden Hour II',     cat: 'portrait',  description: '##'},
-    { title: 'Studio Light',       cat: 'portrait',  description: '##'},
-    { title: 'Mountain Silence',   cat: 'landscape', description: '##'},
-    { title: 'Studio Depth',       cat: 'portrait',  description: '##'},
-    { title: 'Rain Reflections',   cat: 'street',    description: '##'},
-    { title: 'Coastal Cliffs',     cat: 'landscape', description: '##'},
-    { title: 'Desert Dunes',       cat: 'landscape', description: '##'},
-    { title: 'Night Market',       cat: 'street',    description: '##'},
-    { title: 'Open Field',         cat: 'landscape', description: '##'},
-    { title: 'Metro Rush',         cat: 'street',    description: '##'},
-    { title: 'Backlight',          cat: 'portrait',  description: '##'},
-    { title: 'Natural Window',     cat: 'portrait',  description: '##'},
-    { title: 'Street Corner',      cat: 'street',    description: '##'},
-    { title: 'Soft Morning',       cat: 'portrait',  description: '##'},
-    { title: 'Lake Mirror',        cat: 'landscape', description: '##'},
-    { title: 'City at Night',      cat: 'street',    description: '##'},
-    { title: 'Autumn Tones',       cat: 'landscape', description: '##'},
-    { title: 'Rooftop View',       cat: 'street',    description: '##'},
-    { title: 'Close Up',           cat: 'portrait',  description: '##'},
-    { title: 'Horizon Line',       cat: 'landscape', description: '##'},
-  ];
-  const meta = catalog[i] || { title: `Photo ${i + 1}`, cat: 'street', description: '' };
-  return { id: i + 1, src, ...meta };
+  // --- Naturaleza / flores ---
+  img3:  { title: 'City Pulse',    cat: 'Nature', description: 'Las flores con gotas de lluvia, capturando la frescura y la belleza de la naturaleza.' },
+  img4:  { title: 'Forest Path',   cat: 'Nature', description: 'Plano en el cual se muestra una flor con sus detalles y un color vibrante.' },
+  img11: { title: 'Open Field',    cat: 'Nature', description: '##' },
+  img16: { title: 'Soft Morning',  cat: 'Nature', description: '##' },
+  img17: { title: 'Lake Mirror',   cat: 'Nature', description: '##' },
+  img18: { title: 'City at Night', cat: 'Nature', description: 'Flor con luminosidad y un color vibrante, capturando la belleza de la naturaleza en su máxima expresión.' },
+  img19: { title: 'Autumn Tones',  cat: 'Nature', description: '##' },
+  img20: { title: 'Rooftop View',  cat: 'Nature', description: '##' },
+  img21: { title: 'Close Up',      cat: 'Nature', description: '##' },
+
+  // --- Street ---
+  img12: { title: 'Metro Rush',  cat: 'Street', description: '##' },
+  img13: { title: 'Backlight',   cat: 'Street', description: '##' },
+  img25: { title: 'Airport',     cat: 'Street', description: '##' },
+
+  // --- Sunset ---
+  img14: { title: 'Natural Window', cat: 'Sunset', description: '##' },
+  img15: { title: 'Street Corner',  cat: 'Sunset', description: '##' },
+
+  // --- Publicity (publi1.jpg ... publi7.jpg) ---
+  img22: { title: 'Night Walk',  cat: 'Publicity', description: '##' },
+  img23: { title: 'Terminal',    cat: 'Publicity', description: '##' },
+  img24: { title: 'City Grid',   cat: 'Publicity', description: '##' },
+  img26: { title: 'Publicity 1', cat: 'Publicity', description: '##' },
+  img27: { title: 'Publicity 2', cat: 'Publicity', description: '##' },
+  img28: { title: 'Publicity 3', cat: 'Publicity', description: '##' },
+  img29: { title: 'Publicity 4', cat: 'Publicity', description: '##' },
+  img30: { title: 'Publicity 5', cat: 'Publicity', description: '##' },
+  img31: { title: 'Publicity 6', cat: 'Publicity', description: '##' },
+  img32: { title: 'Publicity 7', cat: 'Publicity', description: '##' },
+};
+
+// Se construye el arreglo final combinando cada import con SU metadata,
+// usando la clave (img1, img2...) como puente. Si alguna imagen no tiene
+// entrada en PHOTO_META, usa un valor por defecto en vez de romperse.
+const PHOTOS = Object.entries(photoAssets).map(([key, src], i) => {
+  const meta = PHOTO_META[key] || { title: `Photo ${i + 1}`, cat: 'Street', description: '' };
+  return { id: i + 1, key, src, ...meta };
 });
 
 function Projects() {
@@ -121,7 +141,7 @@ function Projects() {
           <button className="lb-nav lb-next" onClick={(e) => { e.stopPropagation(); nextPhoto(); }}>&#10095;</button>
         </div>
       )}
-
+    <WhatsAppBubble /> 
     </div>
   );
 }

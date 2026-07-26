@@ -1,6 +1,7 @@
 import React from 'react'
 import '../styles/About.css'
 import photoAssets from '../components/img';
+import WhatsAppBubble from '../components/WhatsAppBubble';
 
 function About() {
   return (
@@ -24,7 +25,7 @@ function About() {
           with the world.
         </p>
       </div>
-
+    <WhatsAppBubble /> 
     </div>
   )
 }

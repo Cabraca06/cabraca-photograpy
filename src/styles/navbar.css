@@ -18,14 +18,14 @@ body {
   top: 0;
   width: 100%;
   z-index: 1000;
-  background-color: rgba(0, 0, 0, 0.95);
+  background-color: rgba(207, 206, 202, 0.943);
   padding: 14px 24px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 10px rgba(152, 106, 5, 0.4);
 }
 
 /* ===== LOGO ===== */
 .navbar-logo a {
-  color: #fff;
+  color: #111111;
   text-decoration: none;
   font-size: 1.4rem;
   font-weight: 700;
@@ -34,7 +34,7 @@ body {
 }
 
 .navbar-logo a:hover {
-  color: #ccc;
+  color: #a06a06;
 }
 
 /* ===== NAV LINKS — DESKTOP ===== */
@@ -44,7 +44,7 @@ body {
 }
 
 .nav-links a {
-  color: #dbd9d9;
+  color: #0b0b0b;
   text-decoration: none;
   padding: 8px 16px;
   border-radius: 6px;
@@ -53,13 +53,13 @@ body {
 }
 
 .nav-links a:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #fff;
+  background-color: rgba(225, 152, 6, 0.743);
+  color: #fbfaf9;
 }
 
 .nav-links a.active-link {
   background-color: rgba(255, 255, 255, 0.15);
-  color: #fff;
+  color: rgba(225, 152, 6, 0.743);
   font-weight: 600;
 }
 
@@ -90,9 +90,9 @@ body {
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.97);
+    background-color: rgba(207, 206, 202, 0.943);
     padding: 12px 0;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 2px 10px rgba(152, 106, 5, 0.4);
     gap: 0;
   }
 

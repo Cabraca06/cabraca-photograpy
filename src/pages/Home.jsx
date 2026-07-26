@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import '../styles/home.css'
-
 import photoAssets from '../components/img';
 import { Link } from 'react-router-dom'
+import WhatsAppBubble from '../components/WhatsAppBubble';
 
 function Home() {
-  const images = [photoAssets.img6, photoAssets.img8, photoAssets.img3];
+  const images = [photoAssets.img1, photoAssets.img8, photoAssets.img3, photoAssets.img12, photoAssets.img14, photoAssets.img22, photoAssets.img33];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [showOriginalImage, setShowOriginalImage] = useState(false);
 
@@ -21,8 +21,9 @@ function Home() {
   const closeModal = () => setShowOriginalImage(false);
 
   return (
+    
     <div className="page-home">
-
+      <WhatsAppBubble /> 
       {/* Hero Section */}
       <div className="fondo-home">
         <div className="info-fondo">

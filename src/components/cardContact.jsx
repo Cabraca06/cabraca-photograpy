@@ -11,15 +11,28 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // 1. Construimos el mensaje para WhatsApp
+    const whatsappNumber = '50671014718'; // Tu número de WhatsApp sin '+' ni símbolos
+    const text = `¡Hola! Soy ${form.name}.\n\nEmail: ${form.email}\n\nMensaje: ${form.message}`;
+    const encodedText = encodeURIComponent(text);
+
+    // 2. Creamos la URL y la abrimos en una nueva pestaña
+    const url = `https://wa.me/${whatsappNumber}?text=${encodedText}`;
+    window.open(url, '_blank');
+
+    // 3. Mostramos el mensaje de éxito y reseteamos el formulario
     setSubmitted(true);
+    // Opcional: resetear el formulario después de un tiempo
+    setTimeout(() => setSubmitted(false), 5000); // El formulario reaparece después de 5 segundos
   };
 
   return (
     <div className="contact-page">
 
       <div className="contact-header">
-        <h1>Get in touch</h1>
-        <p>Let's work together on your next project</p>
+        <h1>Contactame</h1>
+        <p>Trabajemos juntos en tu proximo proyecto</p>
       </div>
 
       <div className="contact-grid">
@@ -30,8 +43,8 @@ function Contact() {
 
           {submitted ? (
             <div className="success-msg">
-              <span className="success-icon">&#10003;</span>
-              <p>Message sent! I'll get back to you within 24 hours.</p>
+              <span className="success-icon">&#128172;</span>
+              <p>¡Gracias! Serás redirigido a WhatsApp para enviar tu mensaje.</p>
             </div>
           ) : (
             <form className="contact-form" onSubmit={handleSubmit}>
@@ -87,7 +100,7 @@ function Contact() {
               <div className="info-icon">&#9993;</div>
               <div>
                 <p className="info-label">Email</p>
-                <p className="info-value">cabraca@photography.com</p>
+                <p className="info-value">richardcabraca012@gmail.com</p>
               </div>
             </div>
 
@@ -95,7 +108,7 @@ function Contact() {
               <div className="info-icon">&#9743;</div>
               <div>
                 <p className="info-label">Phone</p>
-                <p className="info-value">(123) 4##-7#90</p>
+                <p className="info-value"> 7##1-4718</p>
               </div>
             </div>
 
@@ -103,7 +116,7 @@ function Contact() {
               <div className="info-icon">&#9711;</div>
               <div>
                 <p className="info-label">Location</p>
-                <p className="info-value">123 Main Street, Costa Rica</p>
+                <p className="info-value">Heredia, Costa Rica</p>
               </div>
             </div>
 
