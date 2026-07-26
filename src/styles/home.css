@@ -9,6 +9,7 @@
 .page-home {
   width: 100%;
   overflow-x: hidden;
+
 }
  
 /* ===== HERO SECTION ===== */
@@ -78,7 +79,8 @@
   align-items: center;
   padding: clamp(16px, 4vw, 40px);
   background-color: #918e8e50;
-  min-height: 100vh;
+  
+
 }
  
 .carousel-container {
@@ -89,6 +91,7 @@
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  height: 100%;
 }
  
 .carousel-wrapper {
@@ -216,6 +219,8 @@
  
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
+  
+ 
   .fondo-home {
     background-attachment: scroll; /* fixed no funciona bien en móvil */
     min-height: 100svh;
