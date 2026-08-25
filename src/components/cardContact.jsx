@@ -135,7 +135,7 @@ function Contact() {
           <div className="social-row">
             <a href="https://www.instagram.com/mirrorless__photography/" target="_blank" rel="noreferrer" className="social-btn">Instagram</a>
            {/*  <a href="https://linkedin.com"  target="_blank" rel="noreferrer" className="social-btn">LinkedIn</a>*/}
-            <a href="https://wa.me/+50671014718"        target="_blank" rel="noreferrer" className="social-btn">WhatsApp</a>
+            <a href="https://wa.me/+506710147##"        target="_blank" rel="noreferrer" className="social-btn">WhatsApp</a>
           </div>
 
           <hr className="divider" />
